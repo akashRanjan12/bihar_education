@@ -2,6 +2,15 @@
   padding: 0;
   margin: 0;
 }
+body {
+  background: linear-gradient(
+    to top,
+    rgb(152, 152, 255, 0.6) 0%,
+    rgb(73, 73, 228, 0.6) 40%,
+    rgb(61, 61, 232, 0.6) 60%,
+    rgb(163, 163, 255, 0.6) 100%
+  );
+}
 a {
   text-decoration: none;
 }
@@ -15,16 +24,16 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 0.3px solid rgba(26, 0, 0, 0.5);
   #logo {
     padding-left: 2vh;
-    /* background-color: aqua; */
     font-size: 1.6em;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     background: linear-gradient(
       to right,
       rgb(188, 186, 250) 0%,
       rgb(55, 37, 255) 50%,
-      rgb(48, 48, 212) 100%
+      rgb(122, 122, 252) 100%
     );
     background-clip: text;
     color: transparent;
@@ -32,6 +41,7 @@ a {
 }
 .navbar:hover {
   background-color: rgba(162, 187, 255, 0.5);
+  border: none;
 }
 .search_bar {
   height: auto;
@@ -77,10 +87,29 @@ li:hover {
   display: none;
 }
 /* end nav_bar */
-/* .content {
+/* content onto the head image */
+#data {
   position: absolute;
+  bottom: 300px;
+  left: 20px;
+  height: auto;
+  width: 45vw;
+  background-color: rgb(1, 1, 1, 0.4);
   color: white;
-} */
+  padding: 0.7em;
+  border-radius: 10px;
+}
+#illust {
+  height: 425px;
+  width: 450px;
+  position: absolute;
+  bottom: -40px;
+  right: 5px;
+  background-image: url("images/Webinar-pana.png");
+  background-position: center;
+  background-size: cover;
+}
+/*end of content onto the head image */
 .background_image {
   height: 89vh;
   width: 100%;
@@ -93,6 +122,43 @@ li:hover {
   background-position: center;
   background-size: cover;
 }
+/* main content part start */
+.content_part {
+  display: flex;
+  #left_cont {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    height: auto;
+    width: 16vw;
+    display: flex;
+    justify-content: center;
+    li {
+      list-style: none;
+      transition: all 0.7s;
+      text-decoration-color: rgb(0, 68, 9);
+      font-size: 1.2em;
+      color: white;
+    }
+    li:hover {
+      font-size: 1.4em;
+    }
+  }
+}
+.right_content {
+  padding-top: 2em;
+  height: aoto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+.box {
+  height: 40vh;
+  width: 30%;
+  background-color: aquamarine;
+}
+/* media queries--------------------------------------------------------------- */
 @media (max-width: 840px) {
   .right_navbar {
     display: none;
@@ -101,6 +167,24 @@ li:hover {
     display: block;
     padding-right: 1em;
     padding-left: 0.5em;
+  }
+  /* main content part */
+  .content_part {
+    flex-direction: column;
+    align-items: center;
+    ul {
+      padding-top: 10px;
+      column-count: 2;
+      gap: 15vh;
+    }
+  }
+  .right_content {
+    flex-direction: column;
+    gap: 2em;
+    padding-bottom: 1em;
+  }
+  .box {
+    width: 80%;
   }
 }
 @media (max-width: 400px) {
@@ -113,7 +197,24 @@ li:hover {
       display: block;
       font-size: 1.2em;
       padding-right: 0.3em;
-      color: #032030;
+      color: white;
     }
+  }
+  /* main content part */
+  .content_part {
+    ul {
+      padding-top: 10px;
+      column-count: 2;
+      gap: 2vh;
+    }
+  }
+  .box {
+    width: 90%;
+  }
+}
+/* height media */
+@media (max-height: 420px) {
+  #data {
+    visibility: hidden;
   }
 }
