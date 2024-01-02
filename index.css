@@ -34,16 +34,18 @@ a {
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     background: linear-gradient(
       to right,
-      rgb(188, 186, 250) 0%,
-      rgb(55, 37, 255) 50%,
+      rgb(143, 140, 210) 0%,
+      rgba(42, 26, 215, 0.5) 50%,
       rgb(122, 122, 252) 100%
     );
+    background-size: 85%;
+    animation: shine 7s alternate infinite;
     background-clip: text;
     color: transparent;
   }
 }
 .navbar:hover {
-  background-color: rgba(162, 187, 255, 0.5);
+  background-color: rgba(162, 187, 255, 0.2);
   border: none;
 }
 .search_bar {
@@ -343,7 +345,7 @@ a {
 /* inside front card part */
 .inside_front_card {
   #user_icons {
-    padding-top: 3em;
+    padding-top: 2em;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -362,42 +364,37 @@ a {
     background-size: 85%;
     animation: shine 7s linear infinite;
   }
-  #user_nm_pass {
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-    gap: 1.3em;
-    padding-left: 2em;
-    label {
-      padding-left: 1em;
-      padding-top: 0.4em;
-      font-size: 1em;
-    }
-    input {
-      padding-left: 0.4em;
-      border: none;
-      background-color: rgb(255, 255, 255, 0.5);
-      height: 4vh;
-      width: 290px;
-      border-radius: 10px;
-    }
-  }
-  padding-bottom: 2em;
 }
-#options,
-#sbmt {
-  width: 100%;
+.controls {
+  /* width: 100%; */
   height: auto;
   display: flex;
-  justify-content: space-evenly;
-  input {
-    font-size: 0.8em;
-    padding: 5px;
+  justify-content: center;
+  #text_box {
+    height: 4.5vh;
+    width: 30vw;
     border: none;
-    width: 100px;
+    border-radius: 10px;
+    color: orange;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  #buttons {
+    height: 30px;
+    width: 70px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255, 0.5);
+  }
+  #buttons:hover {
+    color: #0011ff;
+    background-color: rgba(119, 168, 233, 0.3);
   }
 }
-
+/* inside back card */
+#crd_login_reg:hover {
+  color: white;
+}
 /* login form end------------ */
 /* media queries--------------------------------------------------------------- */
 @media (max-width: 840px) {
@@ -451,6 +448,11 @@ a {
   .card {
     width: 100%;
   }
+  .controls {
+    #text_box {
+      width: 60vw;
+    }
+  }
 }
 @media (max-width: 550px) {
 }
@@ -498,14 +500,5 @@ a {
 @media (max-height: 420px) {
   #data {
     visibility: hidden;
-  }
-}
-@media (max-width: 840px) and (min-width: 499px) {
-  #user_nm_pass {
-    justify-content: center;
-  }
-  #options,
-  #sbmt {
-    width: 100%;
   }
 }

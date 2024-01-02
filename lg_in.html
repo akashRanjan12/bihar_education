@@ -57,36 +57,84 @@
                 <div id="user_icons">
                   <i id="user_icon" class="fa-regular fa-user"></i>
                 </div>
-                <form id="user_nm_pass">
-                  <label>User Name/E-mail</label>
-                  <input
-                    type="text"
-                    name="user_name"
-                    placeholder="  Enter your user name..." />
-                </form>
-                <br />
-                <form id="user_nm_pass">
-                  <label>Enter Password.....</label>
-                  <input
-                    type="password"
-                    name="user_password"
-                    placeholder="  Enter Password..." />
-                </form>
-              </div>
-              <div id="options">
-                <form id="sbmt">
-                  <input type="submit" />
-                  <input type="reset" />
-                </form>
+                <div class="controls" id="controls">
+                  <form>
+                    <label>Enter Name:</label><br /><br />
+                    <input
+                      style="padding-left: 0.4em"
+                      id="text_box"
+                      type="text"
+                      placeholder="  Enter user id..." /><br />
+                    <br /><br />
+                    <label>Enter Password:</label><br /><br />
+                    <input
+                      style="padding-left: 0.4em"
+                      id="text_box"
+                      type="password"
+                      placeholder="User password..." /><br /><br />
+                    <input id="buttons" type="submit" value="Log_in" />
+                    <input id="buttons" type="reset" value="Refresh" />
+                  </form>
+                </div>
               </div>
             </div>
             <div class="card-face back-face">
-              <div id="back">
+              <p style="font-size: 1.2em; color: #0011ff; padding: 0.1em">
+                sig_in or register here,
+              </p>
+              <hr color="white" />
+              <div class="controls" id="controls" style="padding-top: 1em">
+                <form>
+                  <label>First Name:</label><br />
+                  <input
+                    style="padding-left: 0.4em"
+                    id="text_box"
+                    type="text"
+                    placeholder="  Enter nick name..." />
+                  <br /><br />
+                  <label>Last Name:</label><br />
+                  <input
+                    style="padding-left: 0.4em"
+                    id="text_box"
+                    type="text"
+                    placeholder="  Enter surname..." />
+                  <br /><br />
+                  <label>E-mail:</label><br />
+                  <input
+                    style="padding-left: 0.4em"
+                    id="text_box"
+                    type="email"
+                    placeholder="  Enter user id..." />
+                  <br /><br />
+                  <label>Enter Phone no:</label><br />
+                  <input
+                    style="padding-left: 0.4em"
+                    id="text_box"
+                    type="number"
+                    placeholder="  Enter user id..." />
+                  <br /><br />
+                  <label>Create Password:</label><br />
+                  <input
+                    style="padding-left: 0.4em"
+                    id="text_box"
+                    type="password"
+                    placeholder="User password..." /><br /><br />
+                  <label>Confirm Password:</label><br />
+                  <input
+                    style="padding-left: 0.4em"
+                    id="text_box"
+                    type="password"
+                    placeholder="User password..." /><br /><br />
+                  <input id="buttons" type="submit" value="Sig_in" />
+                  <input id="buttons" type="reset" value="Refresh" />
+                </form>
+              </div>
+              <div id="back" style="padding-top: 1em">
                 <p
                   id="crd_login_reg"
                   onclick="flipCard()"
                   style="cursor: pointer">
-                  Back to login
+                  Back to log_in
                 </p>
               </div>
             </div>
