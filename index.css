@@ -34,12 +34,12 @@ a {
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     background: linear-gradient(
       to right,
-      #006da4 0%,
-      #032639 60%,
-      #006da4 100%
+      #ffffff 0%,
+      #767ccd 80%,
+      #ffffff 100%
     );
     background-size: 85%;
-    animation: shine 7s alternate infinite;
+    animation: shine 8s alternate infinite;
     background-clip: text;
     color: transparent;
   }
@@ -247,6 +247,7 @@ body {
       color: white;
       padding: 2px;
       cursor: pointer;
+      width: fit-content;
     }
     li:hover {
       font-size: 1.4em;
@@ -352,6 +353,7 @@ body {
     }
     padding-bottom: 1em;
   }
+
   #box2 {
     height: auto;
     width: calc(100% - 30vw);
@@ -363,6 +365,7 @@ body {
       cursor: pointer;
       padding: 0.5em;
       color: black;
+      width: fit-content;
     }
     li:hover {
       font-size: 1.1em;
@@ -370,10 +373,15 @@ body {
   }
   padding-bottom: 0.3em;
 }
+.bn45 {
+  width: 170px;
+  height: 50px;
+}
 #details,
 #production {
   width: 20vw;
 }
+/* end of footer */
 /* login form------------------- */
 /* login form------------------ */
 .log_in {
@@ -402,6 +410,7 @@ body {
     /* width: fit-content; */
   }
 }
+
 /* flip login card */
 .card_container {
   height: auto;
@@ -416,6 +425,48 @@ body {
   height: 80vh;
   width: 23vw;
   background-color: rgb(106, 106, 230, 0.3);
+  background-image: url("images/Armed With Knowledge19259_rectangle_20240117_154650_115_31.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  p {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+  }
+}
+#on_the_left_card {
+  height: 80vh;
+  width: 23vw;
+  background-color: transparent;
+  color: white;
+  display: none;
+}
+.left:hover {
+  border-image: fill 0
+    linear-gradient(rgb(255, 255, 255, 0.1), rgb(0, 0, 0, 0.8));
+  position: relative;
+  #on_the_left_card {
+    display: block;
+    display: flex;
+    align-items: end;
+    animation: up linear 1s;
+    padding: 1em;
+    height: auto;
+    width: auto;
+  }
+}
+@keyframes up {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 .card {
   width: 40vw;
@@ -502,7 +553,139 @@ body {
   color: white;
 }
 /* login form end------------ */
+/* part of Bihar Board ---------------------------------------*/
+.head_image {
+  height: 80vh;
+  width: 100%;
+  background-image: url("images/photo-1488190211105-8b0e65b80b4e.jpeg.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3vh;
+  #bb_head_image {
+    height: auto;
+    width: clamp(230px, 60%, 450px);
+    padding: 10px;
+    background-color: rgba(152, 156, 231, 0.4);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+  }
+}
+.bn13 {
+  display: inline-block;
+  padding: 0.65em 1.6em;
+  border: 3px solid #5950ff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #d0dbf6;
+  text-align: center;
+  transition: all 0.2s;
+  animation: bn13bouncy 5s infinite linear;
+  position: relative;
+}
+.bn13:hover {
+  background-color: rgb(227, 227, 250);
+  color: #000000;
+}
+@keyframes bn13bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+.head_image:hover {
+  border-image: fill 0
+    linear-gradient(rgb(255, 255, 255, 0.1), rgb(0, 0, 0, 0.8));
+}
+/* main of bb*/
+.bb_container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  #b_10th_board,
+  #b_12th_board {
+    height: auto;
+    width: calc(100% - 30%);
+    padding: 20px;
+  }
+  #b_10th_board,
+  #b_12th_board {
+    ol {
+      width: fit-content;
+      padding-left: 2em;
+      padding-top: 2em;
+    }
+    li {
+      cursor: pointer;
+      color: black;
+      padding-bottom: 0.4em;
+      font-size: 1.3em;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    li:hover {
+      text-decoration: underline;
+    }
+  }
+  #b_12th_board {
+    ol {
+      column-count: 2;
+      gap: 10em;
+    }
+  }
+}
+.b_content_10th_board {
+  height: auto;
+  width: 100%;
+  #bb_content01 {
+    padding: 10px;
+    p {
+      padding-left: 1em;
+      font-size: 1.2em;
+      color: black;
+      font-family: "Times New Roman", Times, serif;
+    }
+  }
+}
+/* End of the part of Bihar Board ---------------------------------------*/
 /* media queries--------------------------------------------------------------- */
+
+@media (max-width: 980px) {
+  /* bb part media */
+  .bb_container {
+    flex-direction: column;
+  }
+  #b_12th_board {
+    ol {
+      gap: 10em;
+    }
+  }
+}
 @media (max-width: 840px) {
   .right_navbar {
     display: none;
@@ -559,8 +742,23 @@ body {
       width: 60vw;
     }
   }
+  /* bb part media */
+  #b_12th_board {
+    ol {
+      gap: 5em;
+    }
+  }
 }
-@media (max-width: 550px) {
+@media (max-width: 530px) {
+  /* bb part media */
+  .bb_container {
+    #b_12th_board {
+      ol {
+        column-count: 1;
+        gap: 0em;
+      }
+    }
+  }
 }
 @media (max-width: 400px) {
   #search {
@@ -599,6 +797,16 @@ body {
   .log_in {
     #logo_login {
       display: none;
+    }
+  }
+  /* bb part media */
+  .bb_container {
+    #b_12th_board,
+    #b_10th_board {
+      width: calc(100% - 15%);
+      ol {
+        width: fit-content;
+      }
     }
   }
 }
