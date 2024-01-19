@@ -555,9 +555,12 @@ body {
 /* login form end------------ */
 /* part of Bihar Board ---------------------------------------*/
 .head_image {
+  background-image: url("images/photo-1488190211105-8b0e65b80b4e.jpeg.jpg");
+}
+.head_image,
+.head_10th_image {
   height: 80vh;
   width: 100%;
-  background-image: url("images/photo-1488190211105-8b0e65b80b4e.jpeg.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -569,7 +572,7 @@ body {
     height: auto;
     width: clamp(230px, 60%, 450px);
     padding: 10px;
-    background-color: rgba(152, 156, 231, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
     color: rgb(255, 255, 255);
     font-size: 1.2em;
@@ -673,6 +676,84 @@ body {
   }
 }
 /* End of the part of Bihar Board ---------------------------------------*/
+/* start of the  paart of the 10th board------------------------------------------ */
+.bb_10th_hedimg {
+  height: 50vh;
+  width: 100%;
+  background-color: rgb(255, 166, 0, 0.8);
+}
+/* head background */
+.head_10th_image {
+  animation: theme 21s linear infinite;
+
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    width: 100vmax;
+    height: 100vmax;
+    background: rgba(0, 0, 0, 0.05);
+    animation: background 90s linear infinite;
+  }
+
+  &:after {
+    left: 15vw;
+  }
+
+  &:before {
+    right: 15vw;
+    animation-delay: -30s;
+    animation-direction: reverse;
+  }
+}
+
+@keyframes theme {
+  0% {
+    background: #74c390;
+  }
+
+  16% {
+    background: #5dbdb6;
+  }
+
+  33% {
+    background: #59d4e1;
+  }
+
+  50% {
+    background: #51bce8;
+  }
+
+  66% {
+    background: #1d47f1cc;
+  }
+
+  83% {
+    background: #d96cf1;
+  }
+
+  100% {
+    background: #74c390;
+  }
+}
+
+@keyframes background {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* end of head */
+/* End of the  paart of the 10th board------------------------------------------ */
+
 /* media queries--------------------------------------------------------------- */
 
 @media (max-width: 980px) {
@@ -814,5 +895,11 @@ body {
 @media (max-height: 420px) {
   #data {
     visibility: hidden;
+  }
+}
+@media (max-height: 500px) {
+  .head_image,
+  .head_10th_image {
+    height: auto;
   }
 }
