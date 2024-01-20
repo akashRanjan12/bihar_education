@@ -231,6 +231,12 @@ body {
 /* main content part start */
 .content_part {
   display: flex;
+  a {
+    color: white;
+  }
+  a:hover {
+    color: black;
+  }
   #left_cont {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -682,6 +688,74 @@ body {
   width: 100%;
   background-color: rgb(255, 166, 0, 0.8);
 }
+/* button click here: */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(187, 113, 255, 0.9);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* end button */
 /* head background */
 .head_10th_image {
   animation: theme 21s linear infinite;
@@ -752,9 +826,90 @@ body {
   }
 }
 /* end of head */
+.bb_10th_content {
+  height: auto;
+  width: 100%;
+  #box_of_sub_10th_board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+    justify-content: space-evenly;
+    a {
+      color: rgb(0, 0, 0);
+    }
+  }
+  #bb_10th_main_content {
+    h1 {
+      padding: 0.4em;
+      font-size: 2.1em;
+      font-family: "Times New Roman", Times, serif;
+    }
+    h2 {
+      padding: 0.4em;
+      font-size: 1.8em;
+      font-family: "Times New Roman", Times, serif;
+    }
+    ul {
+      list-style: lower-romanv bvbcftrx;
+      width: fit-content;
+      font-family: "Times New Roman", Times, serif;
+    }
+    li {
+      padding-left: 2em;
+      font-size: 1.2em;
+      padding-bottom: 0.3em;
+      color: black;
+      width: fit-content;
+    }
+    li:hover {
+      /* font-size: 1.1em; */
+      color: white;
+    }
+  }
+}
+/* bb_10th subject button */
+#button-89 {
+  --b: 3px;
+  --s: 0.25em;
+  --color: #373b44;
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#button-89:hover,
+#button-89:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+#button-89:active {
+  background: var(--color);
+  a {
+    color: #fff;
+  }
+}
+/*  */
 /* End of the  paart of the 10th board------------------------------------------ */
 
-/* media queries--------------------------------------------------------------- */
+/* -----------------------------------------------------media queries--------------------------------------------------------------- */
 
 @media (max-width: 980px) {
   /* bb part media */
