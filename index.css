@@ -30,7 +30,7 @@ a {
   border-bottom: 0.3px solid rgba(26, 0, 0, 0.5);
   #logo {
     padding-left: 2vh;
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     background: linear-gradient(
       to right,
@@ -322,13 +322,7 @@ body {
   animation: shine 10s linear infinite;
   cursor: pointer;
 }
-.faq,
-.news {
-  padding-bottom: 1em;
-  height: 55vh;
-  width: 100%;
-  background-color: rgb(255, 255, 255, 0.1);
-}
+
 /* footer---------- */
 .foot {
   height: auto;
@@ -569,7 +563,7 @@ body {
 }
 .head_image,
 .head_10th_image {
-  height: 80vh;
+  height: auto;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -1025,9 +1019,11 @@ body {
     align-items: center;
     ul {
       padding-top: 10px;
-      column-count: 2;
       gap: 15vh;
     }
+  }
+  #left_list {
+    column-count: 2;
   }
   .right_content {
     gap: 2em;
